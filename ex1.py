@@ -6,7 +6,7 @@ def fatorial(n: int) -> int:
     
 
 def main():
-    print("Multiplicação por somas sucessivas")
+    print("Fatorial")
     print("----------------------------------")
     
     try:

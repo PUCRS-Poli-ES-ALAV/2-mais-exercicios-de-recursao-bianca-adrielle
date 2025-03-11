@@ -1,24 +1,26 @@
-def somatorio(n: int) -> int:
-    if (n == 0):
-        return 0
+def fibonacci(n: int) -> int:
+    if n < 2:
+        return n
     
-    if (n > 0):
-        return n + somatorio(n -1)
-    else:
-        return n + somatorio(n +1)
-
+    return fibonacci(n -1) + fibonacci(n -2)
+    
 
 def main():
-    print("Somatorio")
+    print("Fibonacci index")
     print("----------------------------------")
     
     try:
         # Solicita o número ao usuário
         n = int(input("Digite um número: "))
 
+        if n < 0:
+            print("Por favor, digite apenas números naturais (maiores ou iguais a zero).")
+            return
+
         # Calcula e exibe o resultado
-        resultado = somatorio(n)
+        resultado = fibonacci(n)
         print(resultado)
+
             
     except ValueError:
         print("Entrada inválida. Por favor, digite apenas números.")
